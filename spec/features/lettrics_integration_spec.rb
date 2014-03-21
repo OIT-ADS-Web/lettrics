@@ -11,6 +11,12 @@ describe "lettrics integration" do
     expect(page).to have_content('4000')
   end
 
+  it "counts down as user types", js: true do
+    visit '/text_area'
+    fill_in 'with-lettrics', with: "12345"
+    expect(page).to have_content("#{4000 - 5}")
+  end
+
   it "allows limit to be customized"
   it "does not update non-designated text boxes"
   it "can handle two different textboxes on one page"

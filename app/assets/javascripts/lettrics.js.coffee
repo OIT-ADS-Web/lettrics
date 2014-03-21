@@ -1,6 +1,8 @@
 jQuery ->
+  alert 'hello!'
+
   updateCharacterCountdown = () ->
-    charsTyped = $("textarea").val().length;
+    charsTyped = $("textarea.lettrify").val().length;
     charsLeft = 4000 - charsTyped
     $('span#lettrics-characters-available').text(charsLeft)
     if charsLeft < 0
@@ -8,7 +10,7 @@ jQuery ->
     else
       $('span#lettrics-characters-available').removeClass('text-error')
 
-  updateCharacterCountdown() if $('textarea').length > 0
+  updateCharacterCountdown() if $('textarea.lettrify').length > 0
 
-  $('textarea').change(updateCharacterCountdown)
-  $('textarea').keyup(updateCharacterCountdown)
+  $('textarea.lettrify').change(updateCharacterCountdown)
+  $('textarea.lettrify').keyup(updateCharacterCountdown)

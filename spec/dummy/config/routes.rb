@@ -1,4 +1,5 @@
 Dummy::Application.routes.draw do
+  match '/text_area' => 'pages#text_area'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
