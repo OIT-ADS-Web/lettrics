@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.version     = Lettrics::VERSION
   s.authors     = ["patrick mcelwee"]
   s.email       = ["pmm21@duke.edu"]
-  s.description = %q{dead-simple character count for textareas in rails
+  s.description = %q{Dead-simple character count for textareas in Rails
                      app with javascript.}
-  s.summary     = %q{counts and displays characters in a textarea so users
+  s.summary     = %q{Counts and displays characters in a textarea so users
                      do not enter more than the database can handle. for
-                     use in rails applications.}
+                     use in Rails applications.}
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
