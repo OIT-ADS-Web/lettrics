@@ -34,6 +34,9 @@ lettrified textarea.
 This creates a reasonable degradation in case javascript is not available. The
 number will not adjust, but it will state the overall limit to the field.
 
+When the user exceeds the designated limit, a `.text-error` class will be added
+to the counter. In [Bootstrap 2.3](http://getbootstrap.com/2.3.2/base-css.html#typography), this turns the text red by default.
+
 ## Contributing
 
 1. Fork it

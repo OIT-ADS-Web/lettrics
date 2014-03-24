@@ -19,17 +19,14 @@ describe "lettrics integration" do
 
   it "allows limit to be customized", js: true do
     visit '/small_text_area'
-    expect(page).to have_content('40')
+    expect(page).to have_content('10')
     fill_in 'textarea', with: "12345"
-    expect(page).to have_content("You may enter #{40 - 5}")
+    expect(page).to have_content("You may enter #{10 - 5}")
   end
 
   it "updates the page on load if text already in box", js: true do
     visit '/text_area_with_text'
     expect(page).to have_content("#{4000 - 10}")
-  end
-
-  xit "does not update non-designated text boxes", js: true do
   end
 
   it "can handle two different textboxes on one page", js: true do
@@ -40,6 +37,12 @@ describe "lettrics integration" do
     expect(page).to have_content('3995')
   end
 
-  it "adds error class if count exceeds limit"
-  it "adds error class if count less than 0"
+  it "adds or removes error class when crossing limit", js: true do
+    visit '/small_text_area'
+    fill_in 'textarea', with: '0123456789!'
+    expect(page).to have_css('#counter1.text-error')
+
+    fill_in 'textarea', with: '0123456789'
+    expect(page).not_to have_css('#counter1.text-error')
+  end
 end
