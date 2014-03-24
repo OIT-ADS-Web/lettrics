@@ -1,9 +1,9 @@
 jQuery ->
-  alert 'hello!'
+  characterLimit = $('#lettrics-characters-available').text()
 
   updateCharacterCountdown = () ->
-    charsTyped = $("textarea.lettrify").val().length;
-    charsLeft = 4000 - charsTyped
+    charsTyped = $("textarea.lettrify").val().length
+    charsLeft = characterLimit - charsTyped
     $('span#lettrics-characters-available').text(charsLeft)
     if charsLeft < 0
       $('span#lettrics-characters-available').addClass('text-error')
