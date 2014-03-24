@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.17"
+  s.add_dependency "railties", ">= 3.0", "< 5.0"
   s.add_dependency "coffee-rails"
   s.add_dependency "jquery-rails"
 
@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec-rails", "~> 2.12.0"
   s.add_development_dependency "capybara", "~> 2.1.0"
   s.add_development_dependency "selenium-webdriver", "~> 2.25.0"
+  s.add_development_dependency "rails", "~> 3.2.0"
 end
