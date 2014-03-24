@@ -9,6 +9,8 @@ Gem::Specification.new do |s|
   s.version     = Lettrics::VERSION
   s.authors     = ["patrick mcelwee"]
   s.email       = ["pmm21@duke.edu"]
+  s.cert_chain  = ['certs/patrickmcelwee.pem']
+  s.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
   s.description = %q{Dead-simple character count for textareas in Rails
                      app with javascript.}
   s.summary     = %q{Counts and displays characters in a textarea so users

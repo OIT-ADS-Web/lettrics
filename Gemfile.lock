@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lettrics (0.0.1)
+    lettrics (0.0.2)
       coffee-rails
       jquery-rails
       rails (~> 3.2.17)
