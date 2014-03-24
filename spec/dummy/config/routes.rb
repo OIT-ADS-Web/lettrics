@@ -1,6 +1,7 @@
 Dummy::Application.routes.draw do
   match '/text_area' => 'pages#text_area'
   match '/small_text_area' => 'pages#small_text_area'
+  match '/text_area_with_text' => 'pages#text_area_with_text'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

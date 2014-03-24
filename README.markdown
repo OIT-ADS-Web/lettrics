@@ -26,12 +26,14 @@ Use the `#lettrics-characters-available` and `#with-lettrics` tags in your
 markup:
 
     You may enter <span id="lettrics-characters-available">4000</span> characters.
-    <textarea id='with-lettrics' class='lettrify'>
-    </textarea>
+    <textarea id='with-lettrics' class='lettrify'></textarea>
 
 Whatever amount you populate in `#lettrics-characters-available` will be taken
 as the limit. It will automatically update when the page is loaded if there is
 already text in the textarea.
+
+This creates a reasonable degradaton in case javascript is not available. The
+number will not adjust, but it will state the overall limit to the field.
 
 ## Contributing
 

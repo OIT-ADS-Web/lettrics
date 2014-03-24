@@ -24,7 +24,11 @@ describe "lettrics integration" do
     expect(page).to have_content("You may enter #{40 - 5}")
   end
 
-  it "does not update non-designated text boxes"
+  it "updates the page on load if text already in box", js: true do
+    visit '/text_area_with_text'
+    expect(page).to have_content("#{4000 - 10}")
+  end
+
   it "can handle two different textboxes on one page"
-  it "updates the page on load if text already in box"
+  it "does not update non-designated text boxes"
 end
