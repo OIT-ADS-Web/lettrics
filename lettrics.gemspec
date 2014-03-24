@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
                      do not enter more than the database can handle. for
                      use in Rails applications.}
 
-  s.files = Dir["{app,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.17"
