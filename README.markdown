@@ -22,17 +22,16 @@ Add to your 'app/assets/javascripts/application.js':
 
 ## Usage
 
-Use the `#lettrics-characters-available` and `#with-lettrics` tags in your
-markup:
+Use the `.lettrify` and `data-counter` tags in your markup:
 
-    You may enter <span id="lettrics-characters-available">4000</span> characters.
-    <textarea id='with-lettrics' class='lettrify'></textarea>
+    You may enter <span id="my-counter">4000</span> characters.
+    <textarea class='lettrify' data-counter='#my-counter'></textarea>
 
-Whatever amount you populate in `#lettrics-characters-available` will be taken
-as the limit. It will automatically update when the page is loaded if there is
-already text in the textarea.
+Whatever amount you populate in the counter will be taken as the limit. It will
+automatically update when the page is loaded if there is already text in the
+lettrified textarea.
 
-This creates a reasonable degradaton in case javascript is not available. The
+This creates a reasonable degradation in case javascript is not available. The
 number will not adjust, but it will state the overall limit to the field.
 
 ## Contributing

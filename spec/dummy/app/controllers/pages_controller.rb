@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def text_area
   end
 
+  def text_areas
+  end
+
   def text_area_with_text
   end
 

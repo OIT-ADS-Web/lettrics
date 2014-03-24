@@ -1,16 +1,22 @@
 jQuery ->
-  characterLimit = $('#lettrics-characters-available').text()
-
-  updateCharacterCountdown = () ->
-    charsTyped = $("textarea.lettrify").val().length
+  updateCharacterCountdown = (textarea) ->
+    counter = $(textarea.data('counter'))
+    characterLimit = textarea.data('limit')
+    charsTyped = textarea.val().length
     charsLeft = characterLimit - charsTyped
-    $('span#lettrics-characters-available').text(charsLeft)
+    counter.text(charsLeft)
     if charsLeft < 0
-      $('span#lettrics-characters-available').addClass('text-error')
+      counter.addClass('text-error')
     else
-      $('span#lettrics-characters-available').removeClass('text-error')
+      counter.removeClass('text-error')
 
-  updateCharacterCountdown() if $('textarea.lettrify').length > 0
+  $('.lettrify').each (index) ->
+    counter = $($(this).data('counter'))
+    limit = counter.text()
+    $(this).data('limit', limit)
+    updateCharacterCountdown($(this))
 
-  $('textarea.lettrify').change(updateCharacterCountdown)
-  $('textarea.lettrify').keyup(updateCharacterCountdown)
+  $('.lettrify').change ->
+    updateCharacterCountdown($(this))
+  $('.lettrify').keyup ->
+    updateCharacterCountdown($(this))
