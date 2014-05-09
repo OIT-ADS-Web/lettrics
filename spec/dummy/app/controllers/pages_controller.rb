@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def small_text_area
   end
+
+  def page_with_javascript
+  end
 end

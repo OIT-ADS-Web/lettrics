@@ -1,0 +1,8 @@
+<button>Add lettrified field</button>
+
+<script>
+$('button').on('click', function() {
+    $('body').append("You may enter <span id='counter1'>4000</span> characters. <textarea class='lettrify' id='textarea' data-counter='#counter1'></textarea> ");
+    $('.lettrify').lettrify();
+    });
+</script>

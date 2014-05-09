@@ -1,4 +1,4 @@
-jQuery ->
+$.fn.lettrify = () ->
   updateCharacterCountdown = (textarea) ->
     counter = $(textarea.data('counter'))
     characterLimit = textarea.data('limit')
@@ -10,13 +10,16 @@ jQuery ->
     else
       counter.removeClass('text-error')
 
-  $('.lettrify').each (index) ->
+  this.each (index) =>
     counter = $($(this).data('counter'))
     limit = counter.text()
     $(this).data('limit', limit)
+    updateCharacterCountdown(this)
+
+  this.change ->
+    updateCharacterCountdown($(this))
+  this.keyup ->
     updateCharacterCountdown($(this))
 
-  $('.lettrify').change ->
-    updateCharacterCountdown($(this))
-  $('.lettrify').keyup ->
-    updateCharacterCountdown($(this))
+jQuery ->
+  $('.lettrify').lettrify()

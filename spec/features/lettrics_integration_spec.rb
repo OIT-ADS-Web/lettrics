@@ -45,4 +45,12 @@ describe "lettrics integration" do
     fill_in 'textarea', with: '0123456789'
     expect(page).not_to have_css('#counter1.text-error')
   end
+
+  it "can be manually invoked when adding new .lettrics to DOM", js: true do
+    visit '/page_with_javascript'
+    click_button 'Add lettrified field'
+    expect(page).to have_content('4000')
+    fill_in 'textarea', with: "1234"
+    expect(page).to have_content("#{4000 - 4}")
+  end
 end
