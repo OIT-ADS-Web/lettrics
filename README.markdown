@@ -41,9 +41,15 @@ to the counter. In [Bootstrap 2.3](http://getbootstrap.com/2.3.2/base-css.html#t
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Make your changes: Please run the tests and, in most cases, add a failing
+   test of your own. To run the tests (you will need Firefox version < 29):
+
+    bundle install
+    rspec ./spec
+
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
 Please be sure to test any new features and to run the current test suite with
 RSpec.
